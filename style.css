@@ -1,0 +1,640 @@
+/* ==========================================================================
+   SORA — Premium Minimal Theme
+   Palette: white / cream / deep beige, with soft gold-bronze accent
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+Thai:wght@300;400;500;600&family=Sarabun:wght@300;400;500&display=swap");
+
+/* --------------------------------------------------------------------------
+   1. Design tokens
+   -------------------------------------------------------------------------- */
+:root {
+  /* Colors */
+  --color-white: #ffffff;
+  --color-cream: #faf6ef;
+  --color-cream-deep: #f1e9dc;
+  --color-beige: #d9c9b0;
+  --color-beige-deep: #a89377;
+  --color-ink: #3a3129;        /* main text, soft dark brown */
+  --color-ink-soft: #6f6257;   /* secondary text */
+  --color-line: #cdbfa8;       /* thin borders */
+  --color-accent: #b08d57;     /* gold / bronze */
+  --color-accent-deep: #8f6f3f;
+
+  /* Mood accents (small touches only) */
+  --mood-botanical: #e8dcc0;   /* cream */
+  --mood-lavender: #9a86b8;    /* medium purple */
+  --mood-peach: #eaa597;       /* peach pink */
+
+  /* Typography */
+  --font-serif: "Cormorant Garamond", "Noto Serif Thai", Georgia, "Times New Roman", serif;
+  --font-serif-th: "Noto Serif Thai", "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Sarabun", "Helvetica Neue", Arial, sans-serif;
+
+  /* Spacing scale (generous) */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 6rem;
+  --space-7: 9rem;
+
+  /* Layout */
+  --container: 1120px;
+  --radius: 2px;
+  --transition: 0.35s ease;
+}
+
+/* --------------------------------------------------------------------------
+   2. Reset & base
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.85;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--color-accent-deep);
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+::selection {
+  background: var(--color-beige);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 1px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   3. Typography
+   -------------------------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-serif-th);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+  color: var(--color-ink);
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.4rem); }
+h2 { font-size: clamp(1.5rem, 3.2vw, 2.2rem); }
+h3 { font-size: 1.25rem; }
+
+p {
+  margin: 0 0 var(--space-2);
+  color: var(--color-ink-soft);
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.lead {
+  font-size: 1.1rem;
+  max-width: 38rem;
+}
+
+.text-center { text-align: center; }
+.text-center .lead { margin-left: auto; margin-right: auto; }
+
+/* Thin gold divider */
+.divider {
+  display: block;
+  width: 48px;
+  height: 1px;
+  margin: var(--space-3) 0;
+  background: var(--color-accent);
+  border: 0;
+}
+
+.text-center .divider { margin-left: auto; margin-right: auto; }
+
+/* --------------------------------------------------------------------------
+   4. Layout
+   -------------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+.section {
+  padding: var(--space-6) 0;
+}
+
+.section--white { background: var(--color-white); }
+.section--cream-deep { background: var(--color-cream-deep); }
+
+.section-header {
+  margin-bottom: var(--space-5);
+  text-align: center;
+}
+
+.section-header .lead { margin: 0 auto; }
+
+/* --------------------------------------------------------------------------
+   5. Buttons (thin line, soft dark)
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2.4rem;
+  background: transparent;
+  border: 1px solid var(--color-ink);
+  border-radius: var(--radius);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.btn:hover {
+  background: var(--color-ink);
+  color: var(--color-cream);
+}
+
+.btn--accent {
+  border-color: var(--color-accent);
+  color: var(--color-accent-deep);
+}
+
+.btn--accent:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.btn--small {
+  padding: 0.6rem 1.4rem;
+  font-size: 0.75rem;
+}
+
+.btn--block { display: block; width: 100%; }
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* --------------------------------------------------------------------------
+   6. Header & navigation
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(250, 246, 239, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 76px;
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-size: 1.7rem;
+  font-weight: 500;
+  letter-spacing: 0.45em;
+  color: var(--color-ink);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.nav a {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+}
+
+.nav a:hover,
+.nav a.is-active {
+  color: var(--color-accent-deep);
+}
+
+.cart-count {
+  display: inline-block;
+  min-width: 1.4rem;
+  margin-left: 0.4rem;
+  padding: 0 0.3rem;
+  border: 1px solid var(--color-accent);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  line-height: 1.3rem;
+  text-align: center;
+  color: var(--color-accent-deep);
+}
+
+/* --------------------------------------------------------------------------
+   7. Hero
+   -------------------------------------------------------------------------- */
+.hero {
+  padding: var(--space-7) 0 var(--space-6);
+  text-align: center;
+  background: linear-gradient(180deg, var(--color-white) 0%, var(--color-cream) 100%);
+}
+
+.hero h1 {
+  max-width: 18ch;
+  margin: 0 auto var(--space-3);
+  line-height: 1.5;
+}
+
+.hero .lead {
+  margin: 0 auto var(--space-4);
+}
+
+/* --------------------------------------------------------------------------
+   8. Mood accents (tiny touches only)
+   -------------------------------------------------------------------------- */
+.mood--botanical { --mood-color: var(--mood-botanical); }
+.mood--lavender  { --mood-color: var(--mood-lavender); }
+.mood--peach     { --mood-color: var(--mood-peach); }
+
+/* Small dot (icon-like) */
+.mood-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 0.6rem;
+  border-radius: 50%;
+  background: var(--mood-color, var(--color-beige));
+  border: 1px solid var(--color-beige-deep); /* keeps cream dot visible on cream */
+  vertical-align: middle;
+}
+
+/* Short underline beneath mood headings */
+.mood-underline {
+  display: block;
+  width: 36px;
+  height: 2px;
+  margin: var(--space-2) 0;
+  background: var(--mood-color, var(--color-accent));
+}
+
+.text-center .mood-underline { margin-left: auto; margin-right: auto; }
+
+/* Mood cards: white card, thin border, color appears only as a small detail */
+.mood-card {
+  padding: var(--space-4) var(--space-3);
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.mood-card h3 { margin-bottom: 0; }
+
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+/* --------------------------------------------------------------------------
+   9. Products
+   -------------------------------------------------------------------------- */
+.product-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.filter-btn {
+  padding: 0.5rem 1.4rem;
+  background: transparent;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  color: var(--color-ink-soft);
+  cursor: pointer;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.is-active {
+  border-color: var(--color-accent);
+  color: var(--color-accent-deep);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.product-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-3px);
+}
+
+.product-card__image {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--color-cream-deep);
+}
+
+.product-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: var(--space-3);
+}
+
+.product-card__mood {
+  margin-bottom: var(--space-1);
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+}
+
+.product-card__name {
+  margin-bottom: var(--space-1);
+  font-size: 1.05rem;
+}
+
+.product-card__desc {
+  flex: 1;
+  margin-bottom: var(--space-3);
+  font-size: 0.92rem;
+}
+
+.product-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--color-cream-deep);
+}
+
+.product-card__price {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+.size-tag {
+  display: inline-block;
+  padding: 0.1rem 0.7rem;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--color-ink-soft);
+}
+
+/* --------------------------------------------------------------------------
+   10. Cart & order form
+   -------------------------------------------------------------------------- */
+.cart-list { border-top: 1px solid var(--color-line); }
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.qty {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+}
+
+.qty button {
+  width: 2.2rem;
+  height: 2.2rem;
+  background: transparent;
+  border: 0;
+  font-size: 1.1rem;
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.qty button:hover { color: var(--color-accent-deep); }
+
+.qty span {
+  min-width: 2.2rem;
+  text-align: center;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-3) 0;
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--color-ink);
+}
+
+.form-group { margin-bottom: var(--space-3); }
+
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--color-ink);
+  transition: border-color var(--transition);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-message {
+  margin-top: var(--space-2);
+  font-size: 0.95rem;
+  color: var(--color-accent-deep);
+}
+
+/* --------------------------------------------------------------------------
+   11. Footer
+   -------------------------------------------------------------------------- */
+.site-footer {
+  padding: var(--space-5) 0 var(--space-4);
+  background: var(--color-cream-deep);
+  border-top: 1px solid var(--color-line);
+  text-align: center;
+}
+
+.site-footer .logo { display: inline-block; margin-bottom: var(--space-2); }
+
+.site-footer p {
+  margin-bottom: 0.3rem;
+  font-size: 0.85rem;
+}
+
+.footer-note {
+  margin-top: var(--space-3);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--color-beige-deep);
+}
+
+/* --------------------------------------------------------------------------
+   12. Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 960px) {
+  .product-grid,
+  .mood-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --space-5: 3rem;
+    --space-6: 4rem;
+    --space-7: 5rem;
+  }
+
+  .container { padding: 0 var(--space-2); }
+
+  .site-header .container {
+    flex-direction: column;
+    gap: var(--space-1);
+    padding-top: var(--space-2);
+    padding-bottom: var(--space-2);
+  }
+
+  .logo { font-size: 1.4rem; }
+  .nav { gap: var(--space-3); }
+
+  .product-grid,
+  .mood-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .btn { padding: 0.8rem 1.6rem; }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "botanical-30",
+    "name": "ยาสระผม Botanical Harmony เล็ก 30ml",
+    "mood": "Botanical Harmony",
+    "type": "shampoo",
+    "size": "30ml",
+    "price": 89,
+    "image": "images/Botanical.jpg",
+    "description": "ลองสัมผัสความสดชื่นโปร่งเบาจากธรรมชาติ ในขนาดพกพาที่พร้อมเริ่มต้นทุกเช้า"
+  },
+  {
+    "id": "botanical-100",
+    "name": "ยาสระผม Botanical Harmony ใหญ่ 100ml",
+    "mood": "Botanical Harmony",
+    "type": "shampoo",
+    "size": "100ml",
+    "price": 199,
+    "image": "images/Botanical.jpg",
+    "description": "ความสะอาดสดชื่นและสมดุลจากธรรมชาติ ที่ช่วยให้หนังศีรษะและเส้นผมเบาสบายทุกวัน"
+  },
+  {
+    "id": "lavender-30",
+    "name": "ยาสระผม Lavender Infusion เล็ก 30ml",
+    "mood": "Lavender Infusion",
+    "type": "shampoo",
+    "size": "30ml",
+    "price": 89,
+    "image": "images/Lavender.jpg",
+    "description": "ลองช่วงเวลาผ่อนคลายด้วยกลิ่นลาเวนเดอร์และคาโมมายล์ ในขวดเล็กที่พกไปได้ทุกที่"
+  },
+  {
+    "id": "lavender-100",
+    "name": "ยาสระผม Lavender Infusion ใหญ่ 100ml",
+    "mood": "Lavender Infusion",
+    "type": "shampoo",
+    "size": "100ml",
+    "price": 199,
+    "image": "images/Lavender.jpg",
+    "description": "ผ่อนคลายทุกครั้งที่สระ ด้วยกลิ่นลาเวนเดอร์และคาโมมายล์ที่ปลอบประโลมทั้งผมและใจ"
+  },
+  {
+    "id": "peach-30",
+    "name": "ยาสระผม Peach Blossom Infusion เล็ก 30ml",
+    "mood": "Peach Blossom Infusion",
+    "type": "shampoo",
+    "size": "30ml",
+    "price": 89,
+    "image": "images/Peach.jpg",
+    "description": "ลองสัมผัสกลิ่นดอกพีชหอมหวานอบอุ่น ในขนาดน่ารักที่เหมาะกับการเริ่มต้นทำความรู้จัก"
+  },
+  {
+    "id": "peach-100",
+    "name": "ยาสระผม Peach Blossom Infusion ใหญ่ 100ml",
+    "mood": "Peach Blossom Infusion",
+    "type": "shampoo",
+    "size": "100ml",
+    "price": 199,
+    "image": "images/Peach.jpg",
+    "description": "ผมนุ่มลื่นเปล่งประกาย พร้อมกลิ่นพีชหวานละมุนที่ติดตรึงใจทุกวัน"
+  }
+]

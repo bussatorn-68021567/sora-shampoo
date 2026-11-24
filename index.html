@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SORA — ยาสระผมที่ให้คุณโปร่งเบา</title>
+  <meta name="description" content="SORA ยาสระผม 3 กลิ่น 3 อารมณ์ ปล่อยใจให้โปร่งเบา เหมือนท้องฟ้า ตั้งแต่หนังศีรษะจรดปลายผม">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Page-specific touches (full-screen hero, clickable mood cards) */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: calc(100vh - 77px);
+      min-height: calc(100svh - 77px);
+      padding: var(--space-6) 0;
+    }
+    .hero h1 { max-width: 20ch; }
+    a.mood-card {
+      display: block;
+      color: inherit;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+    a.mood-card:hover {
+      border-color: var(--color-accent);
+      color: inherit;
+      transform: translateY(-3px);
+    }
+    .mood-card__tag {
+      display: block;
+      margin-top: 0.4rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      color: var(--color-beige-deep);
+    }
+    .mood-card p { margin-top: var(--space-2); margin-bottom: 0; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">SORA</a>
+      <nav class="nav">
+        <a href="index.html" class="is-active">หน้าแรก</a>
+        <a href="product.html">สินค้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">SORA</span>
+        <h1>ปล่อยใจให้โปร่งเบา เหมือนท้องฟ้า ตั้งแต่หนังศีรษะจรดปลายผม</h1>
+        <hr class="divider">
+        <p class="lead">ยาสระผม 3 กลิ่น 3 อารมณ์ เลือกช่วงเวลาสระผมที่เหมาะกับคุณ</p>
+        <a href="product.html" class="btn">ดูสินค้าทั้งหมด</a>
+      </div>
+    </section>
+
+    <!-- Moods -->
+    <section class="section section--white" id="moods">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Our Moods</span>
+          <h2>เลือกอารมณ์ที่ใช่ สำหรับทุกการสระผม</h2>
+        </div>
+
+        <div class="mood-grid">
+          <a class="mood-card mood--botanical" href="product.html?mood=Botanical%20Harmony">
+            <span class="mood-dot"></span>
+            <h3>Botanical Harmony</h3>
+            <span class="mood-card__tag">โปร่ง สะอาด</span>
+            <span class="mood-underline"></span>
+            <p>สดชื่นและสมดุลจากพฤกษาธรรมชาติ ช่วยให้หนังศีรษะและเส้นผมเบาสบาย พร้อมเริ่มต้นทุกเช้าอย่างมีชีวิตชีวา</p>
+          </a>
+
+          <a class="mood-card mood--lavender" href="product.html?mood=Lavender%20Infusion">
+            <span class="mood-dot"></span>
+            <h3>Lavender Infusion</h3>
+            <span class="mood-card__tag">อ่อนโยน น่ารัก</span>
+            <span class="mood-underline"></span>
+            <p>เปลี่ยนเวลาสระผมให้เป็นช่วงเวลาพักผ่อนแสนละมุน ด้วยกลิ่นลาเวนเดอร์และคาโมมายล์ที่ปลอบประโลมทั้งเส้นผมและจิตใจ</p>
+          </a>
+
+          <a class="mood-card mood--peach" href="product.html?mood=Peach%20Blossom%20Infusion">
+            <span class="mood-dot"></span>
+            <h3>Peach Blossom Infusion</h3>
+            <span class="mood-card__tag">อบอุ่น น่าหลงใหล</span>
+            <span class="mood-underline"></span>
+            <p>โอบกอดเส้นผมด้วยกลิ่นหอมหวานละมุนของดอกพีช ให้ผมนุ่มลื่นเปล่งประกาย พร้อมสัมผัสอบอุ่นที่น่าทะนุถนอม</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a href="index.html" class="logo">SORA</a>
+      <p>ปล่อยใจให้โปร่งเบา เหมือนท้องฟ้า</p>
+      <p class="footer-note">&copy; 2026 SORA. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
